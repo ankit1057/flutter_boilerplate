@@ -7,15 +7,22 @@ import 'package:flutter_boilerplate/values/values.dart';
 class RootScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+
     return Scaffold(
-      body: Container(
+      body: SafeArea(
         child: Center(
-          child: CustomButton(
-            onPressed: () {
-              //To navigate to the next screen
-              ExtendedNavigator.of(context).push(Routes.nextScreen);
-            },
-            title: StringConst.PROFILE,
+          child: Container(
+            height: Sizes.HEIGHT_50,
+            width: width * 0.7,
+            child: CustomButton(
+              color: AppColors.secondaryColor,
+              onPressed: () {
+                //To navigate to the next screen
+                ExtendedNavigator.root.push(Routes.nextScreen);
+              },
+              title: StringConst.NEXT_SCREEN,
+            ),
           ),
         ),
       ),

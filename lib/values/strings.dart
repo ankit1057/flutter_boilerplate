@@ -7,5 +7,7 @@ class StringConst {
   //Categories
   static const String CATEGORIES = "Categories";
   static const String PROFILE = "Profiles";
+  static const String NEXT_SCREEN = "Next Screen";
+  static const String ROOT_SCREEN = "Root Screen";
   static const String MENU = "Menus";
 }
