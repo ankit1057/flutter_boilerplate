@@ -110,6 +110,15 @@ class SpaceH96 extends StatelessWidget {
 }
 //Widths
 
+class SpaceW2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: Sizes.WIDTH_2,
+    );
+  }
+}
+
 class SpaceW4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

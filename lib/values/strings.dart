@@ -10,4 +10,6 @@ class StringConst {
   static const String NEXT_SCREEN = "Next Screen";
   static const String ROOT_SCREEN = "Root Screen";
   static const String MENU = "Menus";
+
+  static const String BASE_URL = "https://josephcobbinah.com:4000/api/";
 }
