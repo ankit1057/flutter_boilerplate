@@ -6,10 +6,10 @@ class ImagePath {
   static const String categoriesImageDir = "assets/images/categories";
   static const String screenshotsDir = "assets/screenshots";
 
-
   //Images
   static const String ALEXIO_MORALES = "$imageDir/alexio_morales.png";
 
   //Icons
   static const String GOOGLE_LOGO = "$imageDir/google.png";
+  static const String FLUTTER = "$imageDir/flutter.gif";
 }

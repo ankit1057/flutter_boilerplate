@@ -4,8 +4,11 @@ import 'package:flutter_boilerplate/ui/routes/app_router.gr.dart';
 import 'package:flutter_boilerplate/values/values.dart';
 
 import 'app_theme.dart';
+import 'injection_container.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  configureDependencies();
   runApp(MyApp());
 }
 

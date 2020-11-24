@@ -5,19 +5,13 @@ import 'package:flutter_boilerplate/domain/images/image_failure.dart';
 import 'package:flutter_boilerplate/infrastructure/images/image_dtos.dart';
 import 'package:flutter_boilerplate/values/values.dart';
 import 'package:http/http.dart' as http;
+import 'package:injectable/injectable.dart';
 
-abstract class ImagesRemoteDataSource {
-  Future<ImageDto> fetchMoreImages({
-    String url,
-  });
-
-  Future<int> fetchSomething();
-}
-
-class ImagesRemoteDataSourceImpl implements ImagesRemoteDataSource {
+@injectable
+class ImagesRemoteDataSource {
   final http.Client client;
 
-  ImagesRemoteDataSourceImpl({
+  ImagesRemoteDataSource({
     @required this.client,
   });
 
@@ -27,7 +21,7 @@ class ImagesRemoteDataSourceImpl implements ImagesRemoteDataSource {
   }) async {
     return new Future.delayed(
       const Duration(seconds: 3),
-      () => ImageDto(imageUrl: ImagePath.GOOGLE_LOGO),
+      () => ImageDto(imageUrl: ImagePath.FLUTTER),
     );
     return ImageDto(imageUrl: ImagePath.GOOGLE_LOGO);
 //    final response = await client.get(

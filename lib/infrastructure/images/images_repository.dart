@@ -4,9 +4,12 @@ import 'package:flutter_boilerplate/domain/core/failures.dart';
 import 'package:flutter_boilerplate/domain/core/network_info.dart';
 import 'package:flutter_boilerplate/domain/images/image_failure.dart';
 import 'package:flutter_boilerplate/infrastructure/images/image_dtos.dart';
+import 'package:injectable/injectable.dart';
 
 import 'images_remote_data_source.dart';
 
+
+@injectable
 class ImagesRepository {
   ImagesRemoteDataSource imagesRemoteDataSource;
   NetworkInfo networkInfo;

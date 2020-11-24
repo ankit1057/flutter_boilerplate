@@ -4,12 +4,14 @@ import 'package:flutter_boilerplate/domain/images/image_failure.dart';
 import 'package:flutter_boilerplate/infrastructure/images/image_dtos.dart';
 import 'package:flutter_boilerplate/infrastructure/images/images_repository.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 import 'package:meta/meta.dart';
 
 part 'images_state.dart';
 
 part 'images_cubit.freezed.dart';
 
+@injectable
 class ImagesCubit extends Cubit<ImagesState> {
   final ImagesRepository _imagesRepository;
 
